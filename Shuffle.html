@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sort and Shuffle</title>
+        <link type="text/css" rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1 class="heading">Shuffle And Sort</h1>
+            </header>
+            <main>
+                <ul id="shuffleAndSort"></ul>
+                <div class="section-right">
+                    <button type="button" id="btn1" class="btn shuffle-btn" onClick="shuffleValues()">Shuffle</button>
+                    <button type="button" id="btn2" class="btn sort-btn" onClick="sortValues()">Sort</button>
+                </div>
+            </main>
+            <footer><p class="footer-text">Shuffle and sort by Junisha khatri</p></footer>
+        </div>
+        <script>
+            let arrayItems = ['1', '2', '3', '4' , '5' , '6' , '7' , '8' , '9'],
+            shuffleWrapper = document.getElementById('shuffleAndSort');
+
+            arrayItems.forEach((item, index) => {
+                shuffleWrapper.innerHTML += '<li data-item=' + item + '>' + item + '</li>'
+            })
+
+            const shuffleValues = () => {
+                let index = 0
+                arrayItems  = arrayItems.sort(() => {return .5 - Math.random() });
+                shuffleWrapper.innerHTML = '';
+                while (index < arrayItems.length) {
+                    let item = document.createElement("li");
+                    item.innerHTML = arrayItems[index]
+                    item.setAttribute('data-item', arrayItems[index])
+                    shuffleWrapper.appendChild(item)
+                    ++index
+                }
+            }
+
+            const sortValues = () => {
+                let index = 0;
+                arrayItems = arrayItems.sort((a,b) => {return a-b});
+                shuffleWrapper.innerHTML = '';
+                while(index < arrayItems.length) {
+                    let item = document.createElement("li");
+                    item.innerHTML = arrayItems[index];
+                    item.setAttribute('data-item', arrayItems[index])
+                    shuffleWrapper.appendChild(item);
+                    ++index;
+                }
+            }
+        </script>
+    </body>
+</html>

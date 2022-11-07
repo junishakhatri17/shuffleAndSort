@@ -1,0 +1,144 @@
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #efefef;
+}
+
+.heading {
+    text-align: center;
+}
+main {
+    display: flex;
+    border-top: 8px solid #ccc;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 65%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    width: calc(100% / 3);
+    padding: 70px 0;
+    color: #fff;
+    font-size: 40px;
+}
+
+.section-right {
+    width : 35%;
+    text-align: center;
+    margin-left: 1%;
+}
+
+.btn {
+    overflow: visible;
+    margin-top: 22px;
+    position: relative;
+    width: 240px;
+    text-decoration: none;
+    padding: 15px 50px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid #2b8ead;
+    -webkit-box-shadow: 0px 5px 0px #2b8ead;
+    -moz-box-shadow: 0px 5px 0px #2b8ead;
+    -ms-box-shadow: 0px 5px 0px #2b8ead;
+    box-shadow: 0px 5px 0px #2b8ead;
+    text-shadow: 1px 1px 1px #2b8ead;
+    border-radius: 5px;
+    background: #72c3dc;
+ 
+}
+
+footer {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+[data-item='1'],
+[data-item='8']  {
+    background: #6f98a8;
+}
+
+[data-item='2'],
+[data-item='4']  {
+    background: #2b8ead;
+}
+
+[data-item='3'],
+[data-item='5'], [data-item='9']  {
+    background: #2f454e;
+}
+
+[data-item='6'],
+[data-item='7']  {
+    background: #bfbfbf;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        background: #333;
+        color: #fff;
+        padding: 15px 0;
+    }
+   
+    main {
+        flex-direction: column-reverse;
+        background: #fff;
+    }
+
+    ul {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    ul li {
+        width: 100%;
+        color: black;
+        padding: 0;
+        margin-bottom: 4px;
+    }
+
+    .section-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        width: 150px;
+    }
+
+    [data-item='1'],
+    [data-item='8']  {
+        background: #efefef;
+        border-left: 5px solid #6f98a8;
+    }
+
+    [data-item='2'],
+    [data-item='4']  {
+        background: #efefef;
+        border-left: 5px solid #2b8ead;
+    }
+
+    [data-item='3'],
+    [data-item='5'] , [data-item='9'] {
+        background: #efefef;
+        border-left: 5px solid #2f454e;
+    }
+
+    [data-item='6'],
+    [data-item='7']  {
+        background: #efefef;
+        border-left: 5px solid #bfbfbf;
+    }
+}
